@@ -822,7 +822,7 @@
   resolved "https://registry.yarnpkg.com/@dual-bundle/import-meta-resolve/-/import-meta-resolve-4.1.0.tgz#519c1549b0e147759e7825701ecffd25e5819f7b"
   integrity sha512-+nxncfwHM5SgAtrVzgpzJOI1ol0PkumhVo469KCf9lUi21IGcY90G98VuHm9VRrUypmAzawAHO9bs6hqeADaVg==
 
-"@eslint-community/eslint-utils@^4.1.2", "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0", "@eslint-community/eslint-utils@^4.4.1", "@eslint-community/eslint-utils@^4.5.1":
+"@eslint-community/eslint-utils@^4.1.2", "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0", "@eslint-community/eslint-utils@^4.5.0", "@eslint-community/eslint-utils@^4.5.1":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.5.1.tgz#b0fc7e06d0c94f801537fd4237edc2706d3b8e4c"
   integrity sha512-soEIOALTfTK6EjmKMMoLugwaP0rzkad90iIWd1hMO9ARkSAyjfMfkRRhLvD5qH7vvM0Cg72pieUfR6yh6XxC4w==
@@ -1769,7 +1769,7 @@
     "@types/range-parser" "*"
     "@types/send" "*"
 
-"@types/express-serve-static-core@^4.17.33":
+"@types/express-serve-static-core@^4.17.21", "@types/express-serve-static-core@^4.17.33":
   version "4.19.6"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.19.6.tgz#e01324c2a024ff367d92c66f48553ced0ab50267"
   integrity sha512-N4LZ2xG7DatVqhCZzOGb1Yi5lMbXSZcmdLDe9EzSndPV2HpWYWzRbaerl2n27irrm94EPpprqa8KpskPT085+A==
@@ -4101,9 +4101,9 @@ ejs@^3.1.10, ejs@^3.1.6, ejs@^3.1.8:
     jake "^10.8.5"
 
 electron-to-chromium@^1.5.73:
-  version "1.5.123"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.123.tgz#fae5bdba0ba27045895176327aa79831aba0790c"
-  integrity sha512-refir3NlutEZqlKaBLK0tzlVLe5P2wDKS7UQt/3SpibizgsRAPOsqQC3ffw1nlv3ze5gjRQZYHoPymgVZkplFA==
+  version "1.5.125"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.125.tgz#544d29660f1646db616dfa843f6d4493b31e9be7"
+  integrity sha512-A2+qEsSUc95QvyFDl7PNwkDDNphIKBVfBBtWWkPGRbiWEgzLo0SvLygYF6HgzVduHd+4WGPB/WD64POFgwzY3g==
 
 emittery@^1.0.3:
   version "1.1.0"
@@ -4530,11 +4530,11 @@ eslint-plugin-import@^2.29.1, eslint-plugin-import@^2.31.0:
     tsconfig-paths "^3.15.0"
 
 eslint-plugin-n@^17.14.0:
-  version "17.16.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-n/-/eslint-plugin-n-17.16.2.tgz#042eae252b1f4201c77596fc28ee9a391dc07c83"
-  integrity sha512-iQM5Oj+9o0KaeLoObJC/uxNGpktZCkYiTTBo8PkRWq3HwNcRxwpvSDFjBhQ5+HLJzBTy+CLDC5+bw0Z5GyhlOQ==
+  version "17.17.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-n/-/eslint-plugin-n-17.17.0.tgz#6644433d395c2ecae0b2fe58018807e85d8e0724"
+  integrity sha512-2VvPK7Mo73z1rDFb6pTvkH6kFibAmnTubFq5l83vePxu0WiY1s0LOtj2WHb6Sa40R3w4mnh8GFYbHBQyMlotKw==
   dependencies:
-    "@eslint-community/eslint-utils" "^4.4.1"
+    "@eslint-community/eslint-utils" "^4.5.0"
     enhanced-resolve "^5.17.1"
     eslint-plugin-es-x "^7.8.0"
     get-tsconfig "^4.8.1"
@@ -10523,9 +10523,9 @@ stylelint-order@^6.0.2:
     postcss-sorting "^8.0.2"
 
 stylelint@^16.2.1:
-  version "16.16.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-16.16.0.tgz#ebecf27becd277aaf752e75de324023a1e13e486"
-  integrity sha512-40X5UOb/0CEFnZVEHyN260HlSSUxPES+arrUphOumGWgXERHfwCD0kNBVILgQSij8iliYVwlc0V7M5bcLP9vPg==
+  version "16.17.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-16.17.0.tgz#12f31389283883d8d15bb5c019830af8176998a1"
+  integrity sha512-I9OwVIWRMqVm2Br5iTbrfSqGRPWQUlvm6oXO1xZuYYu0Gpduy67N8wXOZv15p6E/JdlZiAtQaIoLKZEWk5hrjw==
   dependencies:
     "@csstools/css-parser-algorithms" "^3.0.4"
     "@csstools/css-tokenizer" "^3.0.3"
@@ -11390,13 +11390,14 @@ webpack-dev-middleware@^7.4.2:
     schema-utils "^4.0.0"
 
 webpack-dev-server@^5.0.2:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-5.2.0.tgz#68043886edaa3fd875ad20e01589990a79612f9c"
-  integrity sha512-90SqqYXA2SK36KcT6o1bvwvZfJFcmoamqeJY7+boioffX9g9C0wjjJRGUrQIuh43pb0ttX7+ssavmj/WN2RHtA==
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-5.2.1.tgz#049072d6e19cbda8cf600b9e364e6662d61218ba"
+  integrity sha512-ml/0HIj9NLpVKOMq+SuBPLHcmbG+TGIjXRHsYfZwocUBIqEvws8NnS/V9AFQ5FKP+tgn5adwVwRrTEpGL33QFQ==
   dependencies:
     "@types/bonjour" "^3.5.13"
     "@types/connect-history-api-fallback" "^1.5.4"
     "@types/express" "^4.17.21"
+    "@types/express-serve-static-core" "^4.17.21"
     "@types/serve-index" "^1.9.4"
     "@types/serve-static" "^1.15.5"
     "@types/sockjs" "^0.3.36"
