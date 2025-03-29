@@ -6261,9 +6261,9 @@ human-signals@^2.1.0:
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
 
 human-signals@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-8.0.0.tgz#2d3d63481c7c2319f0373428b01ffe30da6df852"
-  integrity sha512-/1/GPCpDUCCYwlERiYjxoczfP0zfvZMU/OWgQPMya9AbAE24vseigFdhAMObpc8Q4lc/kjutPfUddDYyAmejnA==
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-8.0.1.tgz#f08bb593b6d1db353933d06156cedec90abe51fb"
+  integrity sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ==
 
 humanize-ms@^1.2.1:
   version "1.2.1"
@@ -8330,9 +8330,9 @@ nth-check@^2.0.1:
     boolbase "^1.0.0"
 
 nwsapi@^2.0.9:
-  version "2.2.19"
-  resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.19.tgz#586660f7c24c34691907002309a8dc28064c9c0b"
-  integrity sha512-94bcyI3RsqiZufXjkr3ltkI86iEl+I7uiHVDtcq9wJUTwYQJ5odHDeSzkkrRzi80jJ8MaeZgqKjH1bAWAFw9bA==
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.20.tgz#22e53253c61e7b0e7e93cef42c891154bcca11ef"
+  integrity sha512-/ieB+mDe4MrrKMT8z+mQL8klXydZWGR5Dowt4RAGKbJ3kIGEx3X4ljUo+6V73IXtUPWgfOlU5B9MlGxFO5T+cA==
 
 oauth-sign@~0.9.0:
   version "0.9.0"
