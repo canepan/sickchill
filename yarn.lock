@@ -11173,9 +11173,9 @@ uri-path@^1.0.0:
   integrity sha512-8pMuAn4KacYdGMkFaoQARicp4HSw24/DHOVKWqVRJ8LhhAwPPFpdGvdL9184JVmUwe7vz7Z9n6IqI6t5n2ELdg==
 
 url-or-path@^2.3.0:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/url-or-path/-/url-or-path-2.3.2.tgz#c0369727f143f260902f6874590faea88dc4de00"
-  integrity sha512-DOI9KXk0bc/JOmFQHbn25knW2GX/ym7+egKFEFApG3VdDzRlLBMCIrMnruq4AZUGop1W0aiYQ5Vry6clzhxcOQ==
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/url-or-path/-/url-or-path-2.5.0.tgz#2053cd81db2d6c43d9008e4e06416f382504c44f"
+  integrity sha512-RCHv4JxhqDmXHix65rBDD98E5eIct7Md2ps0Vr1j2cH4GLW+yzW7c5t6K4vfLCHcpVDv3NFdBJKmJxpG3Y+3CA==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
