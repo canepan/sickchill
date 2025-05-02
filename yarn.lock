@@ -841,9 +841,9 @@
     minimatch "^3.1.2"
 
 "@eslint/config-helpers@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@eslint/config-helpers/-/config-helpers-0.2.1.tgz#26042c028d1beee5ce2235a7929b91c52651646d"
-  integrity sha512-RI17tsD2frtDu/3dmI7QRrD4bedNKPM08ziRYaC5AhkGrzIAJelm9kJU1TznK+apx6V+cqRz8tfpEeG3oIyjxw==
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@eslint/config-helpers/-/config-helpers-0.2.2.tgz#3779f76b894de3a8ec4763b79660e6d54d5b1010"
+  integrity sha512-+GPzk8PlG0sPpzdU5ZvIRMPidzAnZDl/s9L+y13iodqvb8leL53bTannOrQ/Im7UkpsmFU5Ily5U60LWixnmLg==
 
 "@eslint/core@^0.12.0":
   version "0.12.0"
@@ -4137,9 +4137,9 @@ ejs@^3.1.10, ejs@^3.1.6, ejs@^3.1.8:
     jake "^10.8.5"
 
 electron-to-chromium@^1.5.73:
-  version "1.5.147"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.147.tgz#98429d740b8d45e12f63795263b3dc5600d26899"
-  integrity sha512-Myr733VWPkF9e2EZ3MiLJZm4IxV489nbfEFU0GOCC1a0vOXOvW51qF1eLIf+fA7vyATduvCEs9KE6t0opdzQ6A==
+  version "1.5.149"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.149.tgz#b6d1a468b9537165e2494d0b5b82e9b3392d0ddb"
+  integrity sha512-UyiO82eb9dVOx8YO3ajDf9jz2kKyt98DEITRdeLPstOEuTlLzDA4Gyq5K9he71TQziU5jUVu2OAu5N48HmQiyQ==
 
 emittery@^1.0.3:
   version "1.1.0"
@@ -8493,9 +8493,9 @@ open-editor@^5.0.0:
     open "^10.1.0"
 
 open@^10.0.3, open@^10.1.0:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/open/-/open-10.1.1.tgz#5fd814699e47ae3e1a09962d39f4f4441cae6c22"
-  integrity sha512-zy1wx4+P3PfhXSEPJNtZmJXfhkkIaxU1VauWIrDZw1O7uJRDRJtKr9n3Ic4NgbA16KyOxOXO2ng9gYwCdXuSXA==
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/open/-/open-10.1.2.tgz#d5df40984755c9a9c3c93df8156a12467e882925"
+  integrity sha512-cxN6aIDPz6rm8hbebcP7vrQNhvRcveZoJU72Y7vskh4oIm+BZwBECnx5nTmrlres1Qapvx27Qo1Auukpf8PKXw==
   dependencies:
     default-browser "^5.2.1"
     define-lazy-prop "^3.0.0"
