@@ -868,9 +868,9 @@
     "@types/json-schema" "^7.0.15"
 
 "@eslint/css-tree@^3.3.3":
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/@eslint/css-tree/-/css-tree-3.5.2.tgz#a8f058f2e0d425093a7a235446aa7790aad4e8c1"
-  integrity sha512-SkkEYe3SCzV/iOnsT54sARwlWKCD2hWrxG8GlAWdHbutEyQBf5YpfDAmo83iPUyoS4AHDWyqg4qpHBijdLys9g==
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/@eslint/css-tree/-/css-tree-3.5.3.tgz#f60700ecac109ce660e86bfa7f941c57e6623974"
+  integrity sha512-8I/D8eFcEH6O/arcAeS7MshqPm15ojS25oWxSZwSVxz5SkV2U7o5D2hiUZu7DclJAKV52LB8SosDnIs8Ifpnhw==
   dependencies:
     mdn-data "2.20.0"
     source-map-js "^1.0.1"
@@ -11419,9 +11419,9 @@ webpack-sources@^1.4.3:
     source-map "~0.6.1"
 
 webpack-sources@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
-  integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.3.0.tgz#8d3449f1ed3f254e722a529a0a344a37d2d17048"
+  integrity sha512-77R0RDmJfj9dyv5p3bM5pOHa+X8/ZkO9c7kpDstigkC4nIDobadsfSGCwB4bKhMVxqAok8tajaoR8rirM7+VFQ==
 
 webpack@^5.90.2:
   version "5.99.9"
