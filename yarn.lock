@@ -1943,9 +1943,9 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@>=18":
-  version "24.0.15"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.0.15.tgz#f34fbc973e7d64217106e0c59ed8761e6b51381e"
-  integrity sha512-oaeTSbCef7U/z7rDeJA138xpG3NuKc64/rZ2qmUFkFJmnMsAPaluIifqyWd8hSSMxyP9oie3dLAqYPblag9KgA==
+  version "24.1.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.1.0.tgz#0993f7dc31ab5cc402d112315b463e383d68a49c"
+  integrity sha512-ut5FthK5moxFKH2T1CUOC6ctR67rQRvvHdFLCD2Ql6KXmMuCrjsSsRI9UsLCm9M18BMwClv4pn327UvB7eeO1w==
   dependencies:
     undici-types "~7.8.0"
 
@@ -4288,9 +4288,9 @@ ejs@^3.1.10, ejs@^3.1.6, ejs@^3.1.8:
     jake "^10.8.5"
 
 electron-to-chromium@^1.5.173:
-  version "1.5.189"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.189.tgz#a5c41d2e5c64e2e6cd11bdf4eeeebc1ec8601e08"
-  integrity sha512-y9D1ntS1ruO/pZ/V2FtLE+JXLQe28XoRpZ7QCCo0T8LdQladzdcOVQZH/IWLVJvCw12OGMb6hYOeOAjntCmJRQ==
+  version "1.5.190"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.190.tgz#f0ac8be182291a45e8154dbb12f18d2b2318e4ac"
+  integrity sha512-k4McmnB2091YIsdCgkS0fMVMPOJgxl93ltFzaryXqwip1AaxeDqKCGLxkXODDA5Ab/D+tV5EL5+aTx76RvLRxw==
 
 emittery@^1.2.0:
   version "1.2.0"
@@ -10031,9 +10031,9 @@ smob@^1.0.0:
   integrity sha512-g6T+p7QO8npa+/hNx9ohv1E5pVCmWrVCUzUXJyLdMmftX6ER0oiWY/w9knEonLpnOp6b6FenKnMfR8gqwWdwig==
 
 snyk@^1.1285.1:
-  version "1.1298.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.1298.0.tgz#eb754415408ffed620467c3c2749676d8d958b0a"
-  integrity sha512-2EfBxGj255ansk0YOB1NDQTVVHMl61BGsw4LpkXktJP2vIhMbxmOH8Dpc5ui67THz1HLgvcysMoUN1eIxgvwPA==
+  version "1.1298.1"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.1298.1.tgz#792d7d3d14ee95451aa6eea88ecc8a3e901cb1f2"
+  integrity sha512-eh0zpPS8zR6xuLMi58iO3mGiknSyWFZWDxdBNptlljqi87J1rcEMaxWAneGfgpXyg2jFLjNNaKdR8qJ3KrkH8g==
   dependencies:
     "@sentry/node" "^7.36.0"
     global-agent "^3.0.0"
