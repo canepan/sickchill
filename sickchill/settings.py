@@ -10,6 +10,7 @@ from sickchill.oldbeard.numdict import NumDict
 
 if TYPE_CHECKING:
     from sickchill.movies import MovieList
+    from sickchill.music import MusicList
 
 setup_gettext()
 
