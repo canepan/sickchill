@@ -288,6 +288,45 @@ def change_tv_download_dir(tv_download_dir):
     return True
 
 
+def change_music_download_dir(music_download_dir):
+    """
+    Change MUSIC_DOWNLOAD directory (used by music downloader)
+
+    :param music_download_dir: New music download directory
+    :return: True on success, False on failure
+    """
+    if music_download_dir == "":
+        settings.MUSIC_DOWNLOAD_DIR = ""
+        return True
+
+    if settings.MUSIC_DOWNLOAD_DIR is None or os.path.normpath(settings.MUSIC_DOWNLOAD_DIR) != os.path.normpath(music_download_dir):
+        if helpers.makeDir(music_download_dir):
+            settings.MUSIC_DOWNLOAD_DIR = os.path.normpath(music_download_dir)
+            logger.info("Changed Music download folder to " + music_download_dir)
+        else:
+            return False
+
+    return True
+
+
+def change_music_root_dirs(music_root_dirs):
+    """
+    Change MUSIC_ROOT_DIRS setting (used for music library location)
+
+    :param music_root_dirs: New music root directories
+    :return: True on success, False on failure
+    """
+    if music_root_dirs == "":
+        settings.MUSIC_ROOT_DIRS = ""
+        return True
+
+    if settings.MUSIC_ROOT_DIRS is None or music_root_dirs != settings.MUSIC_ROOT_DIRS:
+        settings.MUSIC_ROOT_DIRS = music_root_dirs
+        return True
+
+    return True
+
+
 def change_unpack_dir(unpack_dir):
     """
     Change UNPACK directory (used by postprocessor)

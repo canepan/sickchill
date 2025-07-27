@@ -180,6 +180,18 @@
                                 <i class="clearfix"></i>
                             </li>
                             % endif
+                            % if settings.USE_MUSICBRAINZ:
+                            <li id="NAVmusic" class="navbar-split dropdown${('', ' active')[topmenu == 'music']}">
+                                <a href="${reverse_url('music', '')}" class="dropdown-toggle" aria-haspopup="true" data-toggle="dropdown" data-hover="dropdown"><span>${_('Music')}</span>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="${reverse_url('music', '')}"><i class="fa fa-fw fa-home"></i>&nbsp;${_('Artist List')}</a></li>
+                                    <li><a href="${reverse_url('music-search', 'search')}"><i class="fa fa-fw fa-music"></i>&nbsp;${_('Add Artists')}</a></li>
+                                </ul>
+                                <i class="clearfix"></i>
+                            </li>
+                            % endif
                             <li id="NAVschedule"${('', ' class="active"')[topmenu == 'schedule']}>
                                 <a href="${static_url('schedule/', include_version=False)}">${_('Schedule')}</a>
                             </li>
@@ -403,6 +415,7 @@
                 <script type="text/javascript" src="${static_url('js/lib/formwizard.js')}"></script><!-- Can't be added to bower -->
                 <script type="text/javascript" src="${static_url('js/parsers.js')}"></script>
                 <script type="text/javascript" src="${static_url('js/rootDirs.js')}"></script>
+                <script type="text/javascript" src="${static_url('js/musicRootDirs.js')}"></script>
                 % if settings.DEVELOPER:
                     <script type="text/javascript" src="${static_url('js/core.js')}"></script>
                 % else:

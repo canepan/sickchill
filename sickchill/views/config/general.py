@@ -30,6 +30,9 @@ class ConfigGeneral(Config):
     def saveRootDirs(self):
         settings.ROOT_DIRS = self.get_body_argument("rootDirString")
 
+    def saveMusicRootDirs(self):
+        settings.MUSIC_ROOT_DIRS = self.get_body_argument("musicRootDirString")
+
     def saveAddShowDefaults(self):
         any_qualities = [int(quality) for quality in self.get_body_arguments("anyQualities[]")]
         best_qualities = [int(quality) for quality in self.get_body_arguments("bestQualities[]")]
@@ -63,6 +66,7 @@ class ConfigGeneral(Config):
         time_preset = self.get_body_argument("time_preset", default=None)
         indexer_timeout = self.get_body_argument("indexer_timeout", default=None)
         log_dir = self.get_body_argument("log_dir", default="")
+        music_download_dir = self.get_body_argument("music_download_dir", default="")
 
         results = []
 
@@ -85,6 +89,8 @@ class ConfigGeneral(Config):
         settings.LOG_SIZE = float(self.get_body_argument("log_size", default="1"))
         if not config.change_log_dir(log_dir):
             results += [_("Unable to create directory {log_dir} or it is not writable, log directory not changed.").format(log_dir=os.path.normpath(log_dir))]
+        if not config.change_music_download_dir(music_download_dir):
+            results += [_("Unable to create directory {directory} or it is not writable, music download directory not changed.").format(directory=os.path.normpath(music_download_dir))]
         settings.WEB_LOG = config.checkbox_to_value(self.get_body_argument("web_log", default=None))
 
         settings.TRASH_REMOVE_SHOW = config.checkbox_to_value(self.get_body_argument("trash_remove_show", default=None))
@@ -111,6 +117,8 @@ class ConfigGeneral(Config):
 
         settings.SSL_VERIFY = config.checkbox_to_value(self.get_body_argument("ssl_verify", default=None))
         helpers.set_opener(settings.SSL_VERIFY)
+        
+        settings.USE_MUSICBRAINZ = config.checkbox_to_value(self.get_body_argument("use_musicbrainz", default=None))
 
         settings.COMING_EPS_MISSED_RANGE = config.min_max(coming_eps_missed_range, 7, 0, 42810)
 

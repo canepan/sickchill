@@ -10,6 +10,7 @@ from sickchill.oldbeard.numdict import NumDict
 
 if TYPE_CHECKING:
     from sickchill.movies import MovieList
+    from sickchill.music import MusicList
 
 setup_gettext()
 
@@ -77,6 +78,7 @@ BOXCAR2_ACCESSTOKEN = None
 BOXCAR2_NOTIFY_ONDOWNLOAD = False
 BOXCAR2_NOTIFY_ONSNATCH = False
 BOXCAR2_NOTIFY_ONSUBTITLEDOWNLOAD = False
+BRANCH = "master"
 CACHE_DIR = None
 CALENDAR_ICONS = False
 CALENDAR_UNPROTECTED = False
@@ -583,7 +585,15 @@ WEB_USERNAME = None
 WINDOWS_SHARES = {}
 
 movie_list: "MovieList" = None
+music_list: "MusicList" = None
 
+# MusicBrainz settings
+USE_MUSICBRAINZ = False
+MUSICBRAINZ_USER_AGENT = "SickChill"
+MUSICBRAINZ_APP_VERSION = "1.0"
+MUSICBRAINZ_CONTACT = "https://sickchill.github.io/"
+MUSIC_ROOT_DIRS = None
+MUSIC_DOWNLOAD_DIR = None
 
 def get_backlog_cycle_time():
     # backlog timer multiple of daily frequency and ensure multiple per mako 'step="60"'

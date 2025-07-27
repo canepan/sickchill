@@ -240,6 +240,44 @@
                             </div>
                         </div>
 
+                        <div class="field-pair row">
+                            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                                <label class="component-title">${_('Music root directories')}</label>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12 component-desc">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span>${_('where the files of music artists are located')}</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                                        <%include file="/inc_musicRootDirs.mako" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="music_root_dirs" id="musicRootDirText" value="${settings.MUSIC_ROOT_DIRS}" />
+
+                        <div class="field-pair row">
+                            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                                <label class="component-title">${_('Music download directory')}</label>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12 component-desc">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="music_download_dir" id="music_download_dir" value="${settings.MUSIC_DOWNLOAD_DIR}"
+                                               class="form-control input-sm input350" autocapitalize="off" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span>${_('where music downloads are stored temporarily')}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-md-12">
                                 <input type="submit" class="btn config_submitter" value="${_('Save Changes')}" />
@@ -1129,6 +1167,20 @@
                                     <div class="col-md-12">
                                         <input type="checkbox" name="ignore_broken_symlinks" id="ignore_broken_symlinks" ${checked(settings.IGNORE_BROKEN_SYMLINKS)}/>
                                         <label for="ignore_broken_symlinks">${_('If checked, broken symbolic links warnings generated when calculating show size will be logged as debug')}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field-pair row">
+                            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                                <label class="component-title">${_('Enable MusicBrainz')}</label>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12 component-desc">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="checkbox" name="use_musicbrainz" id="use_musicbrainz" ${checked(settings.USE_MUSICBRAINZ)}/>
+                                        <label for="use_musicbrainz">${_('enable MusicBrainz and music management')}</label>
                                     </div>
                                 </div>
                             </div>

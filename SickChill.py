@@ -27,6 +27,7 @@ from sickchill import logger, settings
 from sickchill.helper.common import choose_data_dir
 from sickchill.init_helpers import check_installed, get_current_version, remove_pid_file, setup_gettext
 from sickchill.movies import MovieList
+from sickchill.music import MusicList
 from sickchill.oldbeard.name_parser.parser import NameParser, ParseResult
 
 setup_gettext()
@@ -216,6 +217,8 @@ class SickChill:
 
         if settings.DEVELOPER:
             settings.movie_list = MovieList()
+        if settings.USE_MUSICBRAINZ:
+            settings.music_list = MusicList()
 
         web_options = {"debug": args.debug}
         if self.forced_port:

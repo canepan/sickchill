@@ -12,7 +12,7 @@ from tornado.web import Application, RedirectHandler, StaticFileHandler, url
 import sickchill.start
 from sickchill import logger, settings
 from sickchill.oldbeard.helpers import create_https_certificates, generateApiKey
-from sickchill.views import CalendarHandler, LoginHandler, LogoutHandler, MoviesHandler
+from sickchill.views import CalendarHandler, LoginHandler, LogoutHandler, MoviesHandler, MusicHandler
 from sickchill.views.api import ApiHandler, KeyHandler
 from sickchill.views.routes import Route
 
@@ -165,6 +165,18 @@ class SCWebServer(threading.Thread):
                 url(rf'{self.options["web_root"]}/movies/(?P<route>search)/', MoviesHandler, name="movies-search"),
                 url(rf'{self.options["web_root"]}/movies/(?P<route>list)/', MoviesHandler, name="movies-list"),
                 url(rf'{self.options["web_root"]}/movies/(.*)', MoviesHandler, name="movies"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>index)/', MusicHandler, name="music-index"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>details)/(?P<slug>.*)/', MusicHandler, name="music-details"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>album_details)/(?P<slug>.*)/', MusicHandler, name="music-album_details"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>remove)/(?P<pk>.*)/', MusicHandler, name="music-remove"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>add)/', MusicHandler, name="music-add"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>search)/', MusicHandler, name="music-search"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>set_album_status)/(?P<pk>.*)/', MusicHandler, name="music-set_album_status"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>set_albums_status)/', MusicHandler, name="music-set_albums_status"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>search_album)/(?P<pk>.*)/', MusicHandler, name="music-search_album"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>snatch_album)/(?P<pk>.*)/', MusicHandler, name="music-snatch_album"),
+                url(rf'{self.options["web_root"]}/music/(?P<route>set_artist_location)/(?P<pk>.*)/', MusicHandler, name="music-set_artist_location"),
+                url(rf'{self.options["web_root"]}/music/(.*)', MusicHandler, name="music"),
                 # routes added by @route decorator
                 # Plus naked index with missing web_root prefix
             ]

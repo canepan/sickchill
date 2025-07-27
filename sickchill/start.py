@@ -10,7 +10,7 @@ from configobj import ConfigObj
 from tornado.locale import load_gettext_translations
 
 import sickchill
-from sickchill import logger, settings, show_updater, update_manager
+from sickchill import logger, settings, show_updater, update_manager, music
 from sickchill.init_helpers import locale_dir, setup_gettext
 from sickchill.oldbeard import (
     clients,
@@ -183,6 +183,8 @@ def initialize(console_logging: bool = True, debug: bool = False, dbdebug: bool 
 
         settings.SSL_VERIFY = check_setting_bool(settings.CFG, "General", "ssl_verify", True)
         helpers.set_opener(settings.SSL_VERIFY)
+        
+        settings.USE_MUSICBRAINZ = settings.DEVELOPER and check_setting_bool(settings.CFG, "General", "use_musicbrainz", False)
 
         settings.EP_DEFAULT_DELETED_STATUS = check_setting_int(settings.CFG, "General", "ep_default_deleted_status", ARCHIVED)
         if settings.EP_DEFAULT_DELETED_STATUS not in (SKIPPED, ARCHIVED, IGNORED):
@@ -339,6 +341,8 @@ def initialize(console_logging: bool = True, debug: bool = False, dbdebug: bool 
         settings.TORRENT_DIR = check_setting_str(settings.CFG, "Blackhole", "torrent_dir")
 
         settings.TV_DOWNLOAD_DIR = check_setting_str(settings.CFG, "General", "tv_download_dir")
+        settings.MUSIC_ROOT_DIRS = check_setting_str(settings.CFG, "General", "music_root_dirs")
+        settings.MUSIC_DOWNLOAD_DIR = check_setting_str(settings.CFG, "General", "music_download_dir")
         settings.PROCESS_AUTOMATICALLY = check_setting_bool(settings.CFG, "General", "process_automatically")
         settings.NO_DELETE = check_setting_bool(settings.CFG, "General", "no_delete")
         settings.USE_ICACLS = check_setting_bool(settings.CFG, "General", "use_icacls", True)
@@ -963,6 +967,15 @@ def initialize(console_logging: bool = True, debug: bool = False, dbdebug: bool 
             cycleTime=datetime.timedelta(seconds=5),
             threadName="NOTIFICATIONS",
         )
+        
+        # Music queue scheduler
+        settings.musicQueueScheduler = scheduler.Scheduler(
+            music.MusicQueue(),
+            run_delay=datetime.timedelta(seconds=10),
+            cycleTime=datetime.timedelta(seconds=5),
+            threadName="MUSICQUEUE",
+            silent=not settings.USE_MUSICBRAINZ,
+        )
 
         settings.__INITIALIZED__["0"] = True
         return True
@@ -1019,6 +1032,11 @@ def start():
 
             settings.notificationsTaskScheduler.enable = True
             settings.notificationsTaskScheduler.start()
+            
+            # Start the music queue scheduler
+            settings.musicQueueScheduler.enable = settings.USE_MUSICBRAINZ
+            settings.musicQueueScheduler.start()
+            
             settings.started["0"] = True
 
 
@@ -1040,6 +1058,7 @@ def halt():
                 settings.properFinderScheduler,
                 settings.subtitlesFinderScheduler,
                 settings.notificationsTaskScheduler,
+                settings.musicQueueScheduler,
                 settings.events,
             ]
 
@@ -1241,6 +1260,8 @@ def save_config():
                 "backlog_missing_only": int(settings.BACKLOG_MISSING_ONLY),
                 "root_dirs": settings.ROOT_DIRS or "",
                 "tv_download_dir": settings.TV_DOWNLOAD_DIR,
+                "music_root_dirs": settings.MUSIC_ROOT_DIRS or "",
+                "music_download_dir": settings.MUSIC_DOWNLOAD_DIR or "",
                 "keep_processed_dir": int(settings.KEEP_PROCESSED_DIR),
                 "process_method": settings.PROCESS_METHOD,
                 "processor_follow_symlinks": int(settings.PROCESSOR_FOLLOW_SYMLINKS),
@@ -1278,6 +1299,7 @@ def save_config():
                 "ended_shows_update_interval": int(settings.ENDED_SHOWS_UPDATE_INTERVAL),
                 "news_last_read": settings.NEWS_LAST_READ,
                 "flaresolverr_uri": settings.FLARESOLVERR_URI,
+                "use_musicbrainz": int(settings.USE_MUSICBRAINZ),
             },
             "Cloudflare": {"auth_domain": settings.CF_AUTH_DOMAIN, "audience_policy": settings.CF_POLICY_AUD},
             "Shares": settings.WINDOWS_SHARES,

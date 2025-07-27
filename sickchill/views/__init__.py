@@ -22,5 +22,6 @@ from sickchill.views.index import BaseHandler, WebHandler, WebRoot
 from sickchill.views.logs import ErrorLogs
 from sickchill.views.manage import AddShows, Manage, ManageSearches, PostProcess
 from sickchill.views.movies import MoviesHandler
+from sickchill.views.music import MusicHandler
 from sickchill.views.news import HomeNews
 from sickchill.views.routes import Route
